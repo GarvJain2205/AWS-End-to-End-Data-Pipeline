@@ -172,32 +172,3 @@ Garv Jain
 Computer Science Undergraduate
 Interested in **Data Engineering, Cloud Computing, and AI**
 
-Project Implementation
-Please refer to the runbook guide in this repository for detailed steps along with the screenshots.
-
-Setting Up AWS IAM User
-In this step, we create an IAM user in AWS with specific permissions required for the project. The user will have access to S3, Glue, Athena, and QuickSight services. This ensures that the user has the necessary roles to interact with AWS services securely.
-
-image
-Creating S3 Buckets
-We set up S3 buckets to store raw and processed data. The staging folder in the S3 bucket will hold the raw data files, while the data-warehouse folder will store the processed data. This separation ensures organized storage and easy retrieval of data at different stages of the pipeline.
-
-image
-Setting Up AWS Glue for ETL
-AWS Glue is used to create a data pipeline that automates the process of extracting data from the staging folder, transforming it by joining and cleaning the data, and then loading it into the data-warehouse folder. This step highlights the power of Glue in managing ETL (Extract, Transform, Load) operations seamlessly.
-
-image image
-Creating a Data Catalog with AWS Glue Crawler
-AWS Glue Crawler scans the processed data in the data-warehouse folder and automatically creates a data catalog, which consists of databases and tables. This catalog allows for easier querying and management of data within AWS, enabling structured data analysis.
-
-image
-Querying Data with AWS Athena
-In this step, we use AWS Athena to run SQL queries on the processed data stored in S3. Athena allows us to perform interactive queries directly on the data, providing valuable insights without the need for complex infrastructure. The query results are stored in a designated S3 bucket for further analysis.
-
-image
-Visualizing Data with AWS QuickSight
-Finally, we connect AWS QuickSight to Athena to visualize the data. QuickSight offers an intuitive interface to create charts, graphs, and dashboards based on the processed data. These visualizations can be shared with stakeholders, providing them with actionable insights from the data.
-
-image
-Conclusion
-This document serves as a runbook for the project "Cloud Data Pipeline Mastery: End-to-End Analytics with AWS." By following each step, you will be able to set up and run a versatile data pipeline using AWS services. Although we used the Spotify dataset in this example, the architecture is designed to work with any dataset, making it highly adaptable for various real-world scenarios.
